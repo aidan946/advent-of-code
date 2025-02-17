@@ -1,18 +1,16 @@
-let result = 26
-
 let read_lines filename =
   let ch = open_in filename in
   let rec loop acc1 acc2 =
     try
       let line = input_line ch in
-      let parts = 
-        line 
+      let parts =
+        line
         |> String.split_on_char ' '
         |> List.filter (fun s -> s <> "")
       in
       match parts with
       | part1 :: part2 :: _ ->
-          let num1 = int_of_string part1 in
+            let num1 = int_of_string part1 in
           let num2 = int_of_string part2 in
           loop (num1 :: acc1) (num2 :: acc2)
       | _ ->
