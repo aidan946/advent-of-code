@@ -13,7 +13,6 @@ let read_lines filename =
     with
     | End_of_file ->
       close_in ch;
-      (* Reverse and convert to arrays *)
       Array.of_list (List.sort compare acc1), Array.of_list (List.sort compare acc2)
   in
   loop [] []
@@ -26,7 +25,7 @@ let sum =
 ;;
 
 let str_sum = string_of_int sum
-let print_part1 = print_endline str_sum
+let print_part1 = Printf.printf "Day 01 Part 1: %s\n" str_sum
 
 let count_occurrences value array =
   Array.fold_left (fun acc x -> if x = value then acc + 1 else acc) 0 array
@@ -37,4 +36,4 @@ let sum =
 ;;
 
 let str_sum = string_of_int sum
-let print_part2 = print_endline str_sum
+let print_part2 = Printf.printf "Day 01 Part 2: %s\n" str_sum

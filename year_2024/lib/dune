@@ -1,2 +1,3 @@
 (library
- (name y2024))
+ (name year_2024)
+ (libraries core re))

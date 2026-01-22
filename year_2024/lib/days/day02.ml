@@ -42,7 +42,7 @@ let rec sum_safe_lists list =
 ;;
 
 let result = sum_safe_lists lines
-let print_part1 = print_endline (string_of_int result)
+let print_part1 = Printf.printf "Day 02 Part 1: %s\n" (string_of_int result)
 
 let rec row_direction row =
   match row with
@@ -74,4 +74,4 @@ let damped_lines list =
 ;;
 
 let result = sum_safe_lists (damped_lines lines)
-let print_part2 = print_endline (string_of_int result)
+let print_part2 = Printf.printf "Day 02 Part 2: %s\n" (string_of_int result)

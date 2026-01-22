@@ -1,6 +1,6 @@
 (lang dune 3.17)
 
-(name y2024)
+(name year_2024)
 
 (generate_opam_files true)
 
@@ -16,10 +16,10 @@
 (documentation https://url/to/documentation)
 
 (package
- (name y2024)
+ (name year_2024)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml core)
+ (depends ocaml dune core re)
  (tags
   ("add topics" "to describe" your project)))
 
